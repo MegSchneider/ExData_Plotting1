@@ -1,0 +1,3 @@
+householdpower <- read.table("household_power_consumption.txt",header=TRUE,sep=";", comment.char="%", stringsAsFactors=FALSE, na.strings="?") ## used to get it into the table
+householdpower2 <-householdpower[householdpower$Date == "02-01-2007" | householdpower$Date == "02-02-2007",] ## subset dates
+householdpower$Date <- as.Date(householdpower$Date , format = "%d/%m/%y") ##change the dates into a usable format 
